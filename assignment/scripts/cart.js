@@ -73,7 +73,7 @@ console.log('Basket isFull? Should be true:', isFull(basket));
 //  - If an item was added to the array, return `true`
 //  - If there was no room and the item could not be added return `false`
 
-function checkAddItem(item) {
+function addItem(item) {
     if (isFull(basket)) {
         return false;
     } else {
@@ -83,11 +83,11 @@ function checkAddItem(item) {
 }
 
 //test checkAddItem()
-console.log('should not add chocolate to basket and be false:', checkAddItem('chocolate'));
+console.log('should not add chocolate to basket and be false:', addItem('chocolate'));
 console.log('What is in the basket?', basket);
 console.log('empty basket to buy chocolate:', empty(basket));
 console.log('check that basket is empty', basket);
-console.log('should add chocolate and be true', checkAddItem('chocolate'));
+console.log('should add chocolate and be true', addItem('chocolate'));
 console.log('What is in the basket?', basket);
 
 //__Using Array built-in functions!__
@@ -110,5 +110,5 @@ function removeItem(item) {
 
 //test removeItem
 console.log('should be null, no soap in basket:', removeItem('soap'));
-console.log('should be chocolate, there is chocolate in the basket:', removeItem('chocolate'));
+console.log('should remove chocolate, since there is chocolate in the basket:', removeItem('chocolate'));
 console.log('The basket is empty again:', basket);
